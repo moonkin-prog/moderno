@@ -302,3 +302,61 @@
 }
 
 //end trends
+//start advantages
+.advantages {
+    background-color: $dark-bg;
+    padding: 120px 0 115px;
+    &__title {
+        color: #fff;
+        margin-bottom: 80px;
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.pros-item {
+    text-align: center;
+    max-width: 320px;
+    &:hover {
+        .pros-item__img {
+            background: $green;
+            g {
+                fill: #fff;
+            }
+        }
+        .pros-item__title {
+            color: $green;
+        }
+    }
+    &__img {
+        width: 113px;
+        height: 113px;
+        border-radius: 50%;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 30px;
+        color: red;
+        transition: all .3s;
+        g {
+            transition: all .3s;
+        }
+    }
+    &__title {
+        color: #fff;
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 23px;
+        transition: all .3s;
+    }
+    &__text {
+        color: #b0bec5;
+        font-size: 15px;
+        line-height: 24px;
+    }
+}
+
+//end advantsges
