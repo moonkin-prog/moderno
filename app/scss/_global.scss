@@ -26,6 +26,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 14px;
+    overflow-x: hidden;
 }
 
 .container {
@@ -54,4 +55,18 @@ body {
     text-align: center;
     text-transform: capitalize;
     margin-bottom: 35px;
+}
+
+.angle-right {
+    padding-left: 15px;
+    position: relative;
+    &::before {
+        content:'\f105';
+        font-family: 'icomoon';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        font-size: 14px;
+        color: $green;
+    }
 }

@@ -1,0 +1,199 @@
+@media (max-width: 1150px) {
+    .footer__top-row {
+        padding-top: 60px;
+    }
+    .footer__inner {
+        flex-wrap: wrap;
+    }
+    .col-about {
+        min-width: 100%;
+        margin-bottom: 30px;
+    }
+    .footer__col-text {
+        margin-bottom: 25px;
+    }
+    .footer__adress {
+        display: inline-block;
+        margin-right: 40px;
+    }
+    .header__text {
+        display: none;
+    }
+}
+
+@media (max-width: 880px) {
+    .menu__btn {
+        display: block;
+        margin-left: auto;
+    }
+    .menu__list {
+        display: none;
+        position: absolute;
+        z-index: 2;
+        top: 60px + 90px;
+        left: 0;
+        right: 0;
+        background-color: $dark-bg;
+        text-align: center;
+        padding: 20px 0 25px;
+        border-bottom: 10px solid rgba(#fff, 0.3);
+        li {
+            & + li {
+                border-top: 1px solid rgba(#fff, 0.1);
+            }
+            a {
+                display: block;
+                padding: 18px;
+                font-size: 28px;
+            }
+        }
+    }
+    .menu__item+.menu__item {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 800px) {
+    .col-follow {
+        width: 100%;
+        margin-top: 50px;
+    }
+    .footer__social {
+        margin-bottom: 20px;
+    }
+    .footer__top-row {
+        padding-bottom: 60px;
+    }
+    .footer__inner {
+        justify-content: flex-start;
+    }
+    .col-menu + .col-menu {
+        margin-left: 60px;
+    }
+}
+
+@media (max-width: 630px) {
+    .drop-down {
+        display: none;
+    }
+}
+
+@media (max-width: 550px) {
+    .col-menu {
+        width: 100%;
+    }
+    .col-menu + .col-menu {
+        margin-left: 0px;
+    }
+    .footer__col {
+        margin-top: 40px;
+    }
+    .col-about {
+        margin: 0;
+    }
+    .header__buttons {
+        position: absolute;
+        right: 0;
+        top: 90px;
+        flex-direction: column;
+        align-items: flex-end;
+        background-color: $dark-bg;
+        color: #fff;
+        padding: 20px;
+        padding-right: 10px;
+        border-radius: 10px 0 0 10px;
+        z-index: 3;
+        transform: scaleX(0);
+        transform-origin: (right top);
+        transition: all .3s;
+        min-width: 150px;
+        &.active {
+            transform: scaleX(1);
+        }
+    }
+    .user__name {
+        color: #fff;
+    }
+    .user__menu {
+        top: -20px;
+        right: 140px;
+        transform: scaleX(0);
+        transform-origin: (right top);
+    }
+    .basket-box {
+        margin: 0;
+        order: 2;
+        margin-right: 8px;
+    }
+    .basket-box__menu {
+        right: -5px;
+        top: 60px;
+    }
+    .basket {
+        width: 40px;
+        height: 40px;
+        &::before {
+            font-size: 25px;
+        }
+    }
+    .header__btn {
+        width: 100%;
+        padding: 15px 0 16px;
+        margin-bottom: 20px;
+    }
+    .user {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 30px;
+        display: inline-block;
+    }
+    .user::before {
+        display: none;
+    }
+    .user-box, .basket-box, .drop-down {
+        height: auto;
+    }
+    .logo {
+        margin-left: 60px;
+    }
+    .menu__btn {
+        position: absolute;
+        left: 15px;
+        top: 35px;
+        div {
+            background-color: $dark-bg;
+        }
+    }
+    .header__bottom-row,
+    .menu {
+        background-color: transparent;
+        height: 0;
+    }
+    .menu__list {
+        top: 90px;
+    }
+    .user-btn {
+        display: block;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: $dark-bg;
+        position: relative;
+        &::before {
+            content:'\f007';
+            font-family: 'icomoon';
+            position: absolute;
+            color: #fff;
+            top: 50%;
+            left: 50%;
+            font-size: 30px;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+@media (min-width: 880px) {
+    .menu__list {
+        display: flex !important;
+    }
+}
