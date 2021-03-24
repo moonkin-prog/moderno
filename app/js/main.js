@@ -13,11 +13,20 @@ $(function(){
         dots: true
     });
 
+    $('.info-tabs .tab').on('click', function(event) {
+        var id = $(this).attr('data-id');
+        $('.info-tabs').find('.tab-item').removeClass('active-tab').hide();
+        $('.info-tabs .tabs').find('.tab').removeClass('acitve');
+        $(this).addClass('active');
+        $('#' + id).addClass('active-tab').fadeIn();
+        return false;
+    });
+
     $('.menu__btn').on('click', function() {
         $('.menu__list').slideToggle()
     });
 
-    $('.user-btn').on('click', function(){
+    $('.user-btn').on('click', function() {
         $('.header__buttons').toggleClass('active');
     });
 
