@@ -22,6 +22,17 @@ $(function(){
         return false;
     });
 
+
+    $('.settings__tabs .settings__tab').on('click', function(event) {
+        var id = $(this).attr('data-id');
+        $('.settings__tabs').find('.settings__tab-item').removeClass('active-tab').hide();
+        $('.settings__tabs .settings__tabs-box').find('.settings__tab').removeClass('acitve');
+        $(this).addClass('active');
+        $('#' + id).addClass('active-tab').fadeIn();
+        return false;
+    });
+
+
     $('.menu__btn').on('click', function() {
         $('.menu__list').slideToggle()
     });

@@ -1485,7 +1485,8 @@
 
 .page-404__header,
 .about-page__header,
-.contact-page__header {
+.contact-page__header,
+.page-box__header {
     background-color: #fff;
     border-bottom: 1px solid #d7d7d7;
     color: #444444;
@@ -1695,5 +1696,322 @@
 }
 
 //end contact-page
+//start settings
+.settings {
+    &__inner {
+        padding-bottom: 152px;
+    }
+    &__tabs {
+        display: flex;
+    }
+    &__tabs-box {
+        max-width: 270px;
+        width: 100%;
+        background-color: #fff;
+        margin-right: 30px;
+        border: 1px solid #d7d7d7;
+        border-bottom: none;
+        align-self: start;
+        span {
+            display: block;
+            border-bottom: 1px solid #d7d7d7;
+            padding: 18px 20px 18px 50px;
+            color: #707070;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            &::before {
+                left: 25px;
+                top: 17px;
+                color: #444444;
+                font-size: 14px;
+            }
+        }
+    }
+    &__tab-content {
+        width: 100%;
+    }
+    &__tab-item {
+        display: none;
+        &:first-child {
+            display: block;
+        }
+    }
+}
+.page-box {
+    border: 1px solid #d7d7d7;
+    &__body {
+        background-color: #fff;
+        padding: 33px 37px 80px;
+    }
+    &__form-row {
+        & + & {
+            margin-top: 21px;
+        }
+    }
+    &__label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        div {
+            max-width: 220px;
+            width: 100%;
+            color: #444444;
+        }
+    }
+    &__input {
+        height: 40px;
+        max-width: 540px;
+        width: 100%;
+        border: 1px solid #d7d7d7;
+        background-color: #f9f9f9;
+        padding: 0 16px;
+        color: #707070;
+        font-size: 14px;
+    }
+    &__select {
+        height: 40px;
+        max-width: 540px;
+        width: 100%;
+        border: 1px solid #d7d7d7;
+        background-color: #f9f9f9;
+        padding: 0 16px;
+        color: #707070;
+        font-size: 14px;
+    }
+    &__btn {
+        margin-left: 256px;
+        margin-top: 25px;
+        display: block;
+        padding: 16px 30px;
+        border: none;
+        background-color: $green;
+        font-size: 15px;
+        font-weight: 500;
+        color: #fff;
+        cursor: pointer;
+    }
+}
+
+//end settings
+//start profile
+.profile {
+    padding-bottom: 113px;
+    &-status {
+        padding: 6px 14px 6px 27px;
+        border: 1px solid #cccccc;
+        color: #70838d;
+        font-size: 13px;
+        position: relative;
+        &::before {
+            position: absolute;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            display: block;
+            content: '';
+            top: 50%;
+            transform: translateY(-50%);
+            left: 10px;
+        }
+    }
+}
+.profile-on {
+    &::before {
+        background-color: $green;
+    }
+}
+.profile-off {
+    &::before {
+        background-color: $red;
+    }
+}
+.profile__inner {
+    display: flex;
+    margin-bottom: 30px;
+}
+.aside {
+    max-width: 270px;
+    width: 100%;
+    margin-right: 30px;
+    &__social {
+        margin-top: 24px;
+        margin-bottom: 26px;
+    }
+    &__buttons {
+
+    }
+    &__btn {
+        height: 54px;
+        line-height: 54px;
+        font-size: 16px;
+        font-weight: 500;
+        color: #fff;
+        display: block;
+        text-align: center;
+        width: 100%;
+        box-shadow: 0 1px 2px rgba(69, 90, 100, 0.75);
+        &_send {
+            background-color: #546e7a;
+            margin-bottom: 17px;
+            position: relative;
+            padding-left: 91px;
+            text-align-last: left;
+            &::before {
+                content: '\f003';
+                font-family: 'icomoon';
+                color: #fff;
+                font-weight: 400;
+                position: absolute;
+                left: 64px;
+                top: 0;
+            }
+        }
+        &_follow {
+            background-color: $green;
+        }
+    }
+}
+.profile__aside {
+    .aside-author {
+        padding-bottom: 40px;
+    }
+    .author-box {
+        margin-bottom: 30px;
+    }
+}
+.aside__social .footer__social {
+    margin-bottom: 26px;
+}
+.profile__content {
+    width: 100%;
+}
+.profile__banner {
+    padding: 17px 20px;
+    background-color: #fff;
+    border: 1px solid #d7d7d7;
+    margin-bottom: 30px;
+    &-img {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        min-height: 332px;
+    }
+}
+.profile__data {
+    display: flex;
+    background-color: #fff;
+    &-item {
+        padding: 16px 10px 14px;
+        width: 25%;
+        border: 1px solid #d7d7d7;
+        line-height: 24px;
+        text-align: center;
+        & + & {
+            border-left: none;
+        }
+    }
+    &-rate {
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        color: #b0bec5;
+        justify-content: center;
+        span {
+            color: $dark-bg;
+        }
+        .rate-star {
+            margin-right: 7px;
+            padding: 0;
+        }
+    }
+    &-title {
+        color: $dark-bg;
+        font-size: 14px;
+        font-weight: 500;
+        
+    }
+    &-text {
+        color: #707070;
+        font-size: 14px;
+    }
+    &-money {
+        color: #000;
+    }
+}
+.profile-block {
+    background-color: #fff;
+    border: 1px solid #d7d7d7;
+    padding: 40px 46px 52px 42px;
+    &__about {
+        margin-bottom: 42px;
+    }
+    &__title {
+        color: $dark-bg;
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 22px;
+    }
+    &__text {
+        color: #707070;
+        line-height: 24px;
+        max-width: 770px;
+    }
+}
+.skills-block {
+    &__item {
+        margin-bottom: 23px;
+    }
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 14px;
+    }
+    &__name {
+        color: $dark-bg;
+        font-size: 16px;
+        font-weight: 500;
+        font-style: italic;
+    }
+    &__percent {
+        font-size: 16px;
+        font-weight: 700;
+        color: $dark-bg;
+
+    }
+    &__line {
+        background-color: #f4f4f4;
+        border-radius: 5px;
+        height: 15px;
+        width: 100%;
+        span {
+            background-image: url(../images/progress.jpg);
+            background-repeat: repeat-x;
+            display: block;
+            height: 15px;
+            border-radius: 5px;
+        }
+    }
+}
+.profile-tabs {
+    .settings__tab {
+        font-family: 'Roboto', sans-serif !important;
+        position: relative;
+        &::before {
+            font-family: 'icomoon';
+            position: absolute;
+            color: #d0d0d0;
+            font-size: 14px;
+            font-weight: 400;
+            bottom: 0;
+            left: 23px;
+        }
+    }
+}
+
+
+//end profile
+
 
 @import 'media';
